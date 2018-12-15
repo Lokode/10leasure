@@ -13,16 +13,16 @@ class Header extends Component {
         headerShow: false
     }
 
-    componentDidMount() {
-        window.addEventListener('scroll', this.handleScroll);
+    componentDidMount(){
+        window.addEventListener('scroll',this.handleScroll);
     }
 
-    handleScroll = () => {
-        if (window.scrollY > 0) {
+    handleScroll= () => {
+        if (window.scrollY > 0){
             this.setState({
                 headerShow: true
             })
-        } else {
+        }else{
             this.setState({
                 headerShow: false
             })
@@ -37,7 +37,8 @@ class Header extends Component {
 
 
     render() {
-        return ( < AppBar position = "fixed"
+        return ( <AppBar 
+            position = "fixed"
             style = {
                 {
                     backgroundColor: this.state.headerShow ? 'rgba(0,0,0, .6)' : 'transparent',
@@ -46,39 +47,30 @@ class Header extends Component {
                 }
             } >
 
-            <
-            Toolbar >
-            <
-            div className = "header_logo" >
+            <Toolbar>
+            <div className = "header_logo" >
 
-            <
-            div className = "font_righteous header_logo_venue" > Venue 10 < /div>   <
-            div className = "header_logo_title" > < /div>   <
-            /div> 
+            <div className = "font_righteous header_logo_venue" > Venue 10 </div>  
+            <div className = "header_logo_title" >  </div>  
+            </div> 
 
-            <
-            IconButton arialabel = "Menu"
+            <IconButton 
+            arialabel = "Menu"
             color = "inherit"
-            onClick = {
-                () => this.toggleDrawer(true) } >
+            onClick = {() => this.toggleDrawer(true)}
+            >
 
-            <
-            MenuIcon / >
+            <MenuIcon/>
 
-            <
-            /IconButton>
+            </IconButton>
 
-            <
-            SideDrawer open = { this.state.drawerOpen }
-            onClose = {
-                (value) => this.toggleDrawer(value) }
+            <SideDrawer open = { this.state.drawerOpen }
+            onClose = {(value) => this.toggleDrawer(value) }
             />
 
-            <
-            /Toolbar>
+            </Toolbar>
 
-            <
-            /AppBar>
+            </AppBar>
 
         );
     }
