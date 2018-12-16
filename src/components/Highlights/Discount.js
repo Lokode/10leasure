@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Fade from 'react-reveal/Fade';
 import Slide from 'react-reveal/Slide';
-import { throws } from 'assert';
+
+import MyButton from '../utils/MyButton';
 
 class Discount extends Component {
 
@@ -40,10 +41,13 @@ class Discount extends Component {
                         <h3> Purchase tickets before 14th August</h3>
                         <p>Every VIP package comes with one (1) CD of RUFUS DU SOL’s forthcoming project. You will receive an additional email with instructions on how to redeem your album.</p>
 
-                        <div>
-                            button
-                        </div>
                     </div>
+                    <MyButton
+                        text="Purchase tickets"
+                        bck="#ffa800"
+                        color="#ffffff"
+                        link="http://google.com"
+                    />
                 </Slide>
                 </div>
                 
