@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 class Countdown extends Component {
     state ={
             
@@ -8,7 +9,7 @@ class Countdown extends Component {
     render() {
         
         return (
-            <div className="countdown_wrapper">
+            <div className="artist_name">
                 <div className="countdown_top">
                     Show starts in
                 </div>
